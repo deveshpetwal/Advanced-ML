@@ -1,0 +1,864 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20194.19.1211.1636                               -->
+<workbook original-version='18.1' source-build='2019.4.1 (20194.19.1211.1636)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking ignorable='true' predowngraded='true' />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Results' inline='true' name='federated.1dbvrdr06ux3k01gdhet706ffli0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Results' name='textscan.1op5c2q1pc6i3c1bxti8g14oxkjb'>
+            <connection class='textscan' directory='C:/Users/Dev/Desktop/Data' filename='Results.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1op5c2q1pc6i3c1bxti8g14oxkjb' name='Results.csv' table='[Results#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='epoch' ordinal='0' />
+            <column datatype='real' name='Training_Loss' ordinal='1' />
+            <column datatype='real' name='Training_Accuracy' ordinal='2' />
+            <column datatype='real' name='Validation_Loss' ordinal='3' />
+            <column datatype='real' name='Validation_Accuracy' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Results.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>epoch</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[epoch]</local-name>
+            <parent-name>[Results.csv]</parent-name>
+            <remote-alias>epoch</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Training_Loss</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Training_Loss]</local-name>
+            <parent-name>[Results.csv]</parent-name>
+            <remote-alias>Training_Loss</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Training_Accuracy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Training_Accuracy]</local-name>
+            <parent-name>[Results.csv]</parent-name>
+            <remote-alias>Training_Accuracy</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Validation_Loss</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Validation_Loss]</local-name>
+            <parent-name>[Results.csv]</parent-name>
+            <remote-alias>Validation_Loss</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Validation_Accuracy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Validation_Accuracy]</local-name>
+            <parent-name>[Results.csv]</parent-name>
+            <remote-alias>Validation_Accuracy</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Training Accuracy ' datatype='real' name='[Calculation_939000542862491648]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Training_Accuracy] * 100' />
+      </column>
+      <column caption='Validation Accuracy ' datatype='real' name='[Calculation_939000542862663681]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Validation_Accuracy] * 100' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Raw Training Accuracy' datatype='real' name='[Training_Accuracy]' role='measure' type='quantitative' />
+      <column caption='Training Loss' datatype='real' name='[Training_Loss]' role='measure' type='quantitative' />
+      <column caption='Raw Validation Accuracy ' datatype='real' name='[Validation_Accuracy]' role='measure' type='quantitative' />
+      <column caption='Validation Loss' datatype='real' name='[Validation_Loss]' role='measure' type='quantitative' />
+      <column caption='Epoch' datatype='integer' name='[epoch]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_939000542862663681]' derivation='Attribute' name='[attr:Calculation_939000542862663681:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_939000542862491648]' derivation='Sum' name='[sum:Calculation_939000542862491648:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_939000542862663681]' derivation='Sum' name='[sum:Calculation_939000542862663681:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Training_Loss]' derivation='Sum' name='[sum:Training_Loss:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Validation_Loss]' derivation='Sum' name='[sum:Validation_Loss:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.421914' measure-ordering='alphabetic' measure-percentage='0.578086' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='shape' field='[:Measure Names]' type='shape'>
+            <map to='circle'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862491648:qk]&quot;</bucket>
+            </map>
+            <map to='plus'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Training_Loss:qk]&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[attr:Calculation_939000542862663681:qk]&quot;</bucket>
+            </map>
+            <map to='square'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862663681:qk]&quot;</bucket>
+            </map>
+            <map to='times'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Validation_Loss:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[attr:Calculation_939000542862663681:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862663681:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Validation_Loss:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862491648:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Training_Loss:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='epoch' />
+        <field-sort-custom-order field='Training_Loss' />
+        <field-sort-custom-order field='Training_Accuracy' />
+        <field-sort-custom-order field='Calculation_939000542862491648' />
+        <field-sort-custom-order field='Validation_Loss' />
+        <field-sort-custom-order field='Validation_Accuracy' />
+        <field-sort-custom-order field='Calculation_939000542862663681' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Highlight 1 (generated)' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source type='sheet' worksheet='Sheet 1' />
+      <command command='tsc:brush'>
+        <param name='field-captions' value='Measure Names' />
+        <param name='target' value='Sheet 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Bold' fontsize='28'>Accuracy by Epoch</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run fontsize='10'>Model performs best on the 7th epoch with 88.94% accuracy. </run>
+            <run>Æ&#10;&#10;</run>
+            <run fontsize='10'>The trends of Training Accuracy  and Validation Accuracy  for Epoch.  Color shows details about Training Accuracy  and Validation Accuracy .</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Results' name='federated.1dbvrdr06ux3k01gdhet706ffli0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dbvrdr06ux3k01gdhet706ffli0'>
+            <column caption='Training Accuracy ' datatype='real' name='[Calculation_939000542862491648]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Training_Accuracy] * 100' />
+            </column>
+            <column caption='Validation Accuracy ' datatype='real' name='[Calculation_939000542862663681]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Validation_Accuracy] * 100' />
+            </column>
+            <column caption='Raw Training Accuracy' datatype='real' name='[Training_Accuracy]' role='measure' type='quantitative' />
+            <column caption='Raw Validation Accuracy ' datatype='real' name='[Validation_Accuracy]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_939000542862663681]' derivation='Attribute' name='[attr:Calculation_939000542862663681:qk]' pivot='key' type='quantitative' />
+            <column caption='Epoch' datatype='integer' name='[epoch]' role='measure' type='quantitative' />
+            <column-instance column='[epoch]' derivation='None' name='[none:epoch:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_939000542862491648]' derivation='Sum' name='[sum:Calculation_939000542862491648:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862491648:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[attr:Calculation_939000542862663681:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862491648:qk]' value='76' />
+            <format attr='width' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[attr:Calculation_939000542862663681:qk]' value='76' />
+            <format attr='title' class='0' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]' scope='rows' value='Accuracy %' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-weight' value='bold' />
+            <format attr='text-align' value='left' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]' value='Legend' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</rows>
+        <cols>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</cols>
+        <mark-labels>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>7</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[attr:Calculation_939000542862663681:qk]&quot;</value>
+                <value>88.939999999999998</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='2' y='-19' />
+          </mark-label>
+          <mark-label id='2' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[attr:Calculation_939000542862663681:qk]&quot;</value>
+                <value>80.200000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>20</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862491648:qk]&quot;</value>
+                <value>97.450000000000003</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='32' y='0.5' />
+          </mark-label>
+          <mark-label id='4' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Calculation_939000542862491648:qk]&quot;</value>
+                <value>59.650000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{15853B18-3EA3-4053-8A9B-859010A14C39}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Tableau Bold' fontsize='28'>Loss by Epoch </run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run fontsize='10'>Model performs best on the 7th epoch with 0.2769 loss. </run>
+            <run>Æ&#10;&#10;</run>
+            <run fontsize='10'>The trends of Training Loss and Validation Loss for Epoch.  Color shows details about Training Loss and Validation Loss.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Results' name='federated.1dbvrdr06ux3k01gdhet706ffli0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dbvrdr06ux3k01gdhet706ffli0'>
+            <column caption='Training Loss' datatype='real' name='[Training_Loss]' role='measure' type='quantitative' />
+            <column caption='Validation Loss' datatype='real' name='[Validation_Loss]' role='measure' type='quantitative' />
+            <column caption='Epoch' datatype='integer' name='[epoch]' role='measure' type='quantitative' />
+            <column-instance column='[epoch]' derivation='None' name='[none:epoch:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Training_Loss]' derivation='Sum' name='[sum:Training_Loss:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Validation_Loss]' derivation='Sum' name='[sum:Validation_Loss:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Training_Loss:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Validation_Loss:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Training_Loss:qk]' value='76' />
+            <format attr='width' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Validation_Loss:qk]' value='76' />
+            <encoding attr='space' class='0' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]' field-type='quantitative' max='1.0' min='0.0' range-type='fixed' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]' scope='rows' value='Loss' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-family' value='Tableau Book' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='right' />
+                <format attr='vertical-align' value='bottom' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-mode' value='range' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</rows>
+        <cols>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</cols>
+        <mark-labels>
+          <mark-label id='2' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Validation_Loss:qk]&quot;</value>
+                <value>0.58160000000000001</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='-27' y='-2' />
+          </mark-label>
+          <mark-label id='3' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Training_Loss:qk]&quot;</value>
+                <value>0.6604000000000001</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='32' y='6' />
+          </mark-label>
+          <mark-label id='4'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>7</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Training_Loss:qk]&quot;</value>
+                <value>0.27489999999999998</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='8' y='-69' />
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[none:epoch:qk]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+                  <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>7</value>
+                <value>&quot;[federated.1dbvrdr06ux3k01gdhet706ffli0].[sum:Validation_Loss:qk]&quot;</value>
+                <value>0.27690000000000003</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='15' y='22' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{C9A0209F-EA08-4D1E-B75A-C5F491EDF964}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight field='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]'>
+          <bucket-selection />
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{52F1C285-01CC-4F04-AEEF-A69FAE86BA02}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dbvrdr06ux3k01gdhet706ffli0].[:Measure Names]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{821C1205-C1F3-490C-8E9B-9BABA48BA4B6}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      vBbnz1/ED+AYACH6oaO9Qc2IjeHUeeXMHEfGh1m9XGZiOInWOpCzxCilJEdyepLT2e7QWmNZ
+      Jp7jAgZsn0VGax3IEWFXsiRHcm53TkcFcJ0mrhHjzfce49LCCseOjWOaBlrrQI4IkxzJ6VWO
+      oYOqHO1jMYO4Ap7nBXJonORIzs3IViARalIAEWpSABFqUgARalIAEWpSABFqUgARalIAEWpS
+      ABFqUgARalIAEWpSABFqHRWgWS1x5sxZGvUKZ2bmcH05IEbsTR3tDdpsNMivr7JZqTM1MUrZ
+      jzIxnEIphWEYXQ+llMI0u184SY7k3ExH+56Wi5v40UEyAx6Vah1raADTNPf0fuGSE86cjgow
+      kEhQLVQYP3SEYr7EeC6FYYBhGIEsASRHcnqV01EBkpkRkpkRABKT451ECLEryFYgEWpSABFq
+      UgARalIAEWpSABFqUgARalIAEWpSABFqUgARalIAEWpSABFqUgARah0VQPkupa0KWnmsrKyh
+      5HgYsUd1tDdoo1Zj43KRSt4DK8JaoczBXDKwE2RIjuT0KqejAgymMsRLZXzXJzeUYMv3UUqh
+      tcb3/U4if4FSSnIkpyc5HRVg6/Ia+Xyeo3dMsbS+wfT0CSyrvTYVxBE9QCAnSpAcybnpz3US
+      nh4Z5y0j7QNhctlMJxFC7AqyFUiEmhRAhJoUQISaFECEmhRAhJoUQISaFECEmhRAhJoUQISa
+      FECEWlcF2Fy5xAsv/IR8pRHUPEL0VFcFqDQVb7nnBLW6FEDsTV0VYCw7yKm5eXLpZFDzCNFT
+      HZ0h5nqUUoGd4cP3/UB2q5YcybmZXfkkOIiTJEiO5NyKYI4+gKuP/EEsASRHcnqVE9gqkBB7
+      UcCrQJrzs69y7uJSxwlOvczps691PUmrVuLUqRdZL1S7ynFqJU6deon1QqW7gbTi1M9fpNsj
+      Xi+vLfLKq2douqqrnGpxg5dfPU3L626ewvoyL/70x2xstbrKKW2u8tJLL7LV6G6g0uYKp146
+      Re0Wb5+AC+BiRjNYqkWni5VoIkVywO56kmgizfhIjojV3VW0E2miuHh+d3e4zdVFfCNKdynQ
+      qNfQGHS7uryyvIIGPL+7O1zuwCSZ7DDDqVhXOU6zgee1cLosdqvVwjQaLC2VbunnAy5AhEpx
+      mXIXLW5Wi7z22mtsFLt7xC2vXWR2fgOlu7tB6+UCjjao15td5TSbLYqbK1Tr3T1SJgaTOI0y
+      1brbVU4mk8Zr1SlXu7tefquCEUthdVlIx3UxDGg2na5ykqkUbgtGxlK39PPyHECE2q7cDCpE
+      r0gBRKhJAUSoSQFEqEkBRKhJAUSoSQFEqEkBRKj9PzdP6O+fu27CAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAX30lEQVR4nO2dWXQc132nv+q9G+hGY18IghTBBSAgUiQFH8qhEplaLFGSTzLHsSMljieL
+      55yZvCSe8TiexxmfzCTeZB97HuZEdjJxMrHlk+REsmRZtuTIVmhLJAECIAASCwkQJAE01t6X
+      qrrz0CQtRQSJQjfAbtT/eyGJw/r1vxv19a17b926mlJKIQg2xXG3CxCEu4mr0AClFKZpYpom
+      mqYVXJBpmjgchXspOZKzFiwJkE5EubYQ5562FoxskuGRUXbs7SLoy8c4nU5r1d4CXddxuQr2
+      UnIkZ01YUs7tC6CpHABL83Ns27WX2SvT1ioUhBLCkgC5TIqF+Xli8ThKc3JtehKnN7BRtQnC
+      hmOpzXE6XezcuROX00V1wza8gTiVodBG1SYIG44lAdxeP7Ve/81/h6rk5BfKGxkGFWyNCCDY
+      GhFAsDUigGBrRADB1ogAgq0RAQRbIwIItkYEEGyNCCDYGksCRBdnmbwyiwLiy/OMXZpGlpMJ
+      5Yyle4Fm5lfwOBQZvYHp6atkEnEWm7dR7c4viikGpmliGIbkSM6m5FgSQCkTwwRQ7Ny1i9Gh
+      IdzX2xBN04qyIkxyJGczcywJsL25gZWMRi6VAD1NdesuQm4N0FBKlfXSOMmxZ44lAQKhGn65
+      /CVI0MrBglCCyCiQYGtEAMHWiACCrREBBFsjAgi2RgQQbI0IINgaEUCwNSKAYGtEAMHWiACC
+      rREBBFsjAgi2xpIAYyMDnO4bwFAwOT7C6V+8Q7zwNQyCcNew9nh0byUtAUVGV2AqsrqOhsIw
+      8qtwirHfXjFWBUmO5KwVSwI4zAxzSfCHYzhdLnw+N8rQcHryWyMVY4skoChb5UiO5KwFrVjb
+      pBqGIXuESU7Z5UgnWLA1IoBga0QAwdaIAIKtEQEEWyMCCLZGBBBsjQgg2BoRQLA1IoBga0QA
+      wdaIAIKtEQEEW2NJgOX5GS5enkEBs9OXONvXRzK3QZUJwiZg6f7TyFLs+hZJjTS27iSZGcfr
+      yi+IkS2SJKcccywJYBo6WQOUaaKnU2jeynwT4nDIDjGSU5Y5lgRoa20mltUwc2mU201rc/3N
+      /ZjKfa8oybFnjiUB/JVh/JZLEoTSRUaBBFsjAgi2RgQQbE3JCZA6eRIznb7bZQg2oeQEMGNx
+      5p/7GmYqdbdLEWxAyQlQ8egj+O7tJvIXX8SIxe52OcIWp+QEQNMInngC//1HmP/KcyKBsKGU
+      ngDkJzOCJ57A39ND5AvSEggbR0kKANclePzDVBw7RuTPvyASCBtCyQoAeQkqH32Eiod+lfkv
+      fRkjKhIIxaWkBYDrEjz8MBXHjzP/la9gRKN3uyRhC1HyAkBegooHj1H58HEiX/wyxvLy3S5J
+      2CKUhQBwXYJjxwg+8TiRLz8nEghFwZIAo8P9nOrtRzcV1ybH6Bs8z2bvkFTxwFGCT3yYyF98
+      ET0S2eRXF7Ya1rdIqoCsAYvLK2iGIpY2CbrVpm6R5O3pwTRM5r7wJWr+5I9x1detK6dY9UhO
+      +eZYEsCFzkIcKlIxmpuamLo6h8uh4XTmG5LN3CIpeOxXcDgdLD33Veo+/Se4GxvWlVOseiSn
+      PHPKeoskpRSpU6dZ+c53qfvMf3mPBOW+dY/kbE5OyXWCXxkdYWWNd4Nqmkag536qPv6bzH/l
+      OXKzsxtcnbDVKDkBtofC/E3vO6T1tT9vJdDTQ/VvP8v8c18lNzu3gdUJW42SE6CroZEDTS18
+      d6APw8KjVnz3dlP97LP5luDqtQ2sUNhKlJwAmqZxbOcuqrx+Xj4/hGmhi+K7t5vqT36C+a9+
+      DX1mZgOrFLYKJScAgEPTeKpjP4upFD+9NG7pWF9nJ9X//ndZ+trXyVy4sEEVCluFVQWIxRNF
+      e9rbenA6HHy0+yDnZmcYnLV2SePr7KTqP/whi89/k8RbbxVlfkLYmqwqQO/ACP/3u/9MTtc3
+      s573UOHx8MzBw7w2doFLS4uWjvXs3EnD5/6U+OtvsPLC91B38X0Ipcv7BDBNxfde/CH/8NJr
+      eNxuFpdW7kZdN6n2B/hY90H+8Vw/C8mEpWOd4TD1//UzGEtLLHz9G5jJ5AZVKZQrt2wBaqrD
+      7NjewjP/7gSN9bWbXdP72FYV5sS+/fzd2TMkshlLxzq8Xmr+8A/w7N7N3P/8c3LXZIRI+CXv
+      mwk2TZNsTsfldFiaUduMmeCTU5cYnpvhE4d6cN/htW6Vk3znFCsvvED17/8evo6OguuxguSU
+      Zs77WgCHw4HP68HpdGKaBqXUfzy6fQdNwRD/NDRgaXj0BoGe+6n9oz9i6Vt/TfyNn0jnWFi9
+      E9zXe5rvfftbTC+UzjJETdN4fG8HhjJ5ffzCuk5gz442Gj73WZInT7L8//5eOsc2Z1UBQn4X
+      23Z1EvB6NrOeO+LQHPzG/gNcWlrkzNXpdWU4w2Hq/vOnUdks8899FTNhrXMtbB1WFWBq+hpD
+      fW+zGPvlE9qW5q4yPnkVBUQXZugfGOFu7JDkdbn4rQOH+dmlCUYX1rcoxuH1Uv3J38XbtZ/Z
+      z/+ZdI5tyqq9hfa2JpZS0FQTvPmzhZUEHqcioyvmZmbwhupxKYVxfVuazVoQA+BzOvlY90H+
+      rr+XZw4coqGicl05gUcfxdHUROQLXyL8yU/g6epaV86dkJzSzFlVgOlrc3jJsJxIE/RVAKD0
+      NJE4BBMxguEwk1NTxFtaqHTlt0gqxiiQlZymUBWf6nmAb515m6c7urinumZdORX33Uego4Ol
+      b/8tiR+/Ts2nPoWjssJyzu2QnNLMWXVBjFIGs1MX0QMNtNaH7hh0NxbE3GAuHuNv+07zzMHD
+      NAVD685Rpkns+y+TPHWK2v/0H3E3Npb9MJ/k3J5b9gEuj53j5Zd/wM9PDYCzJO+Xew8NlUGe
+      6uziO/29xDLWJsrejeZwEHzqSap+/deZ/+KXSQ8PU1LjwELRKeslkf+WM1emOXVlik8e/gBO
+      Cltjmr08zcI3/jeBh49T9egj6865Qbl/U27VnNL/erfAoZZttNfW8Y9D/ZYW09wKz/ZWGj73
+      WTJnepn/+jfkOURblC0lgKZpfGjXHtwOJz+eGF3XbPG7cVZVUfPpP8bX2cncn/0vkqdOo+7i
+      LeJC8dlSl0A3yBkG3+nvxety8ZHObrwF5N2oR5+bY/Evv4mzOkz4d34bZzB454NvkVMoklPc
+      nC3VAtzAfX2OoCYQ4P+886/MFuHR6q6GBuo/+xk87e3M/Y/PkzrTK/cSbQG2ZAvw7pyxhQgv
+      jpzjwZ3tHGlptbwb+a3qyV29xuLzz+NqbCT87DM4KytXOfr2OetBcoqbs+UFAIim0/zDuX6C
+      Xi9PduzH53IXXI/K5Yi9+kMSP/0Z4WefwXfg3tvKVe4nylbNsYUAAIZp8sbEGOfn5/ho90Ea
+      K9d2DX+nerKXL7P0zb/C3dpK1cd/c9XWoNxPlK2aYxsBID9NProwz4vDgzyyey8HmlrueEm0
+      lnpULkf05VdIvvUW1Z/4Hbzd3e/LLfcTZavm2EqAG0TTaf6+v5eWUIjH9uzD41z99azUk52a
+      YvH5b+Fp207Vxz/2ntag3E+UrZqzJUeB7kTI5+P3j3wAh6bxV6ffZrlIm3J72tpo+G9/irOm
+      hrn//nnSA4NFyRU2Dlu2ADdQSnFuboZXL4zwZMd+9tU1FOXSRSlFbmqKxee/iWfHDsLP/Bam
+      x1PW35RbNceSAKnYMtEMNNaFAVhcXKSmJn8LcjkKcIP5RIIXBvq4p6aGR3bvw+X4ZcNYSD0q
+      myX6/ZdJ/vwXhJ59hsAdRorWQrmfcKWWY0mA8yPDODRo292BkVjgZN8oxx88CpS3AABZw+AH
+      F4aZS8T5aPdBwj5/cepRiuzkJEt/821c4TDBxx7DvWc3mmN9V5/lfsKVWo4lAUZHL+BxQOOO
+      PYwPnGJqdpFjv3acgMeBaZo41vlLfTfFEmm9OQOzM7w+foHH93Swr76hePXoOsbQMNGXXsIE
+      Qk8/jbdrv2UR7vbns9VyLAmwMj/DUlqjJuQnFAqxsrJCVVXVul54NUrhGyUSj/PCYB976xp4
+      sG0nXk/hDwa4UY8yDDJDQ0Rf+j7KMAidOJGfRFtjraXw+WylHFt3gm9HRtd5ceQcK6kUH9nf
+      TX3FnW93sFpPdnKS6IsvkbtyheBjjxF44CgOn89yTrHqsWOOCHAbTKUYvHaV1y+Osb0qzMO7
+      997sGxSrHqUU+tWrRP/5JbJjYwRPPEHFrz6I5r717Rql9PlshRwRYA05OBy8Mz3FyalL7K2r
+      56F7dlPp9Ra1HqUUxsICsR+8SnpggMDRo1Qe/xDO65eYa80pVj12yREBLOSk9Rynr1zm1PRl
+      DjZv42jbjjXfWGelHmNlhfiPXyfx1lv4Dx8m9OSTOMNVlnOKVc9WzhEB1pGTzGX56aUJBmau
+      cXT7Dnpa2+646MZqPUopzESCxBs/IfHmm/i6uwk+eQKqqnCtcnlkhXL4nDcjRwQoIGcpleTN
+      i+NcWlrkwXvaOdjUgnOVYc1C6jHTaZI//wXx136Es7GBqo88jWfnznVlFaOerZQjAhSYo5Ri
+      KZXi9YlRIvE4v7arnY76Bhzae0UoRj0qmyX+9jskfvAqzppqQk8/hae9fV2TauX2OW9UjghQ
+      xJyr0RVeG7tAMpfl4fa97K6tw3H91odi1uPUNNKD54i98goqkyH4xBP4Dx9a81xCsesp5xwR
+      oMg5SikuLS3yxsQYmgYf3tNBczCEYRhFr0eZJtmxMaIvvoSxtETlY49R8cDRVYdQV8spVj3l
+      mCMCbFCOUoqxxXl+OHqeWn+AX2nbSWu4esNuhtMjEaIvv0L67FkqH3qIyoeP46iosJxTrHrK
+      JUcE2OAc3TQZmLnKzy5N4HY66WpsYk9t/c1nmBa7Hj0SIfbaj0if7cd/5BCVx4/jqquznFOs
+      eko9RwTYpJxsLsdyJs1IZI7hyCypXI49dfXsb2ikJVi15mcXrbUeM5Ui8S//QvxHr+Pdt4/g
+      UydwNTXdbIGK8b4uXbrE4uIihw4dYnZ2lpGRERobGxkdHeWBBx5gYGCAAwcOMDAwwAc/+EG8
+      t5k8FAGuU2on7kbkKKWIZtJMLC5wbm6G2XiM1lCY/Q2N3FNTS6WneCeKmU6TPPlz4j/5Ca7q
+      aiofexRvZ2dR+iRvvvkmDoeDnp4eUqkUg4ODHDlyhMHBQRLXd93xeDwsLy9TX19PT09P0d5X
+      sXIKf0XBMpqmUeXzc6illfuat5E1DCaXlxiam+GHo+cJ+/10NTazp7aOar//fUOqVnD4fFR+
+      6CEqHjxGenCQlRe+h+bxEHjicSq6utbUYV4NXc/vr2aaJlNTUzQ3N998fxUVFWSzWRwOB9XV
+      1QQCgXW/zkZiqQWYHBthOa3o7upkafYyk5fn2H/kCH6HtADFyjFMk9l4jOG5WYYiszg1jb11
+      9bTX1tEaCqMpVXA96eERYq+9hn7lKt59e/EdOICvs+O2neZbEYlEiEajVFdXs7S0xJUrV7jv
+      vvvwXF/+2d/fT3t7OxMTExw8ePC260Xuxu8rkc1YE+DixYv4nIqq5ntw5qKc7h3h/gc+gFPl
+      t0jaCgtiSinHVCaxTIbz8xFG5udYSqXYXhWmJRgi7PNT4w9QEwjg1DTLo0uGYaClUmTOnyd9
+      6jS50THcO3bg7bkf38ED+duy15BZTp+zQhFNpxmZjzC+uEAkEbcmwPjIICsZ2HVPG+noAlev
+      ztJ+8ChVXmkBNiMna+iMRiLMpxIsJJPMJ+LEMhlcDgcVHi9hv4+6QCU1gQC1gQqCHi9+t/uW
+      m4r/23rMbJbs+Dipd06RHhjEGa7C39OD/777cNbVrjrbXEqfz61ydNPgWizGhfk5xhbmSeVy
+      dNQ30t3YxLZQlXSCyz3HVIp0LkcsmyGaThNJxFlMJVlIJkhks6R1HY/TSY0/QF1FJdV+P3UV
+      lVS63IQDgVvKoXI5spOTpE6fITMyAkrhO3gQ/5HDeNraNuV9FZJjahoXFxcYXYgwvjBPwONh
+      f0MTe+vqqQ1U3JydBxkF2rI5SikUeUGSuSyLySTzyQSLyQSLySSLqSTJXA7DNPE4nXhcLrxO
+      Fz53/s+A24Pf7SbgcuFZWUH1ncXRd5Zap4vQ4cP4e+7H2drKbDpNdUUAh+bAVCa6YZI1dNK6
+      TjKXI6Pnrv+pk9JzpHM5UrpORs+R1Q1ypkHG0Mnq+d0db56cGjivd/4dmnbz5w5Nu3ll5tAc
+      aOT/4XTk/2YqRTSToSUUoruhmT119fhcrlUvEUUAm+cYpknWMMgZ+RMxncuRMfInbyqXI5nN
+      ktJz11uTHK6VKDVT02y7OEkoGmWkMsDMrp2sNDejBfPLRr0uFz6XC7/Ljc/tJuD24HW58Lvd
+      +Z+5XPhcbjwuJy6HA6/ThaYUbrf7XZuaKAwz/3dTqZuPojeVuvl/TKXIaw6Gmf+7aRhUV1Ti
+      WeO5KMOgNsfpcOB3OPBbGA5VSmEoEy2RJHy2n9zwCMlXf4yrKoz/3m78Bw7gadtuaYhV1/X3
+      fNMDuNYxpqLrOq6NeirE7ZAWwN45Sily09OkBwZJ9/djxmK46uvxHz6Mt7MDZ11dST4+XgSQ
+      nA3JMZNJMuPjpPsHyIycR+Wy+fmGri68HfvQPJ73CCECXKdcfsGSYy1HX1gkMzREemCAzOgY
+      7pZmvF1d+Lq7cDc3Y2iaCADl+wuWnLVjZjLo166R6u0jMzyCvriAZ/ce/N378bS3v+emvY2u
+      RwSQnLuao5RCpdMkB8+hj4+TOX8eIxrDva0F7759eNrb8WxvRQsE1iSFCCA5ZZ9jJpPkrlwh
+      MzpK5vwFjEgEzevF096Od+8ePLt23XKNw3rqEQEkp6RzlFKg6xjLy6SHhslOTJCdmEBls3h2
+      7Mi3Ent242psRPN4LN/mLQJITlnmGPE42fFxshMXyQwNY8SiOKvCuPfuwd/ZiWfnDhxruAVb
+      BJCcss9RSqEyGfS5OVLDI+TOXyA7OYmroR5fZwfe7m48bW23fGqGCCA5WzJHGUZ+Yq5/gPS5
+      cxgLC7hbt+Pt2o+vsxNXYwOay2VNgGR0gaUUbGusJZOMMjWzzO5dbWiIAJJT2jlmIpEXYvAc
+      6eFhzOUVPLvbLW6RdH4Etwbb2veRTURZunaFqvZOgg61ZXaIkRx75JjJJJkLo9ZuhtM0Bw6H
+      QinIpRP46rcRcoJS16/DinA1JTmSsxk5mt+P7+ABawI01YVZTkM2GSOXyzE3O0UweC9+t4ZS
+      qigGS47kbGaOJQFCNQ3ceJxTKBSicZuVowWh9LDlTvGCcAMRQLA1IoBga0QAwdaIAIKtEQEE
+      WyMCCLZGBBBsjQgg2BoRQLA1IoBga0QAwdaIAIKtsSTAxdEhevuHMBQsL8xyYWJqo+oShE3B
+      2ho0l5+msCKjK8K1jUQTUyiVXw1mGEZRFjQYhlFwhuRIzlqxJIDKJZmJgT8cI7UYZXJyktrG
+      bVR48wsQirGgASjK2lDJkZy1IE+FkBxb50gnWLA1IoBga0QAwdaIAIKtEQEEWyMCCLZGBBBs
+      jQgg2BoRQLA1IoBga0QAwdZYEuDC0FlOnTmLbiqmxkc4+a9vkzY3qjRB2HgsCeDyBWmpC5I1
+      QNc83LuzluXMRpUmCBuPJQHcmsFCwiCXihH0uxiZTVHv26jSBGHjKfh26Bs7csgWSZJTjjkl
+      1wnWNE1yJGfTcgpegaBp2s0XLUYLIDmSs5k5RVsRJgjlSNEugZSRY2igj6lr8+vOiC3NM3bp
+      csG1RBdm6evrJZrUC84523uGlVRhOSjFQG8v2QK/a5LRCGdO9xFLF1ZPNrnC2b6zxDOFLUSP
+      LUU4e+YdpmZXCspJRefp7esjspwsKCe5Mk/f2bMsxdNrPqZoAmRSccINbeSS6/8wgtV1eByF
+      N0jB6lpqwyEKvaysCIZQRgajwLmO6OIs6ayi0OceZBNxdM1Z8PuauzKN7nCg5woTKVhdT11t
+      HfU1lQXlGOk0WT1HJlug2Jk0GjpXrkTWfEzRBHB7vFydGiWr1t+tWJmfYXx8gmiysMmFqbFh
+      ri7EUKqwM3dleRGlQarAelKpNPGVeZZWEgXlOH0VeEmytJwqKCcUrgYjw9JyrKAc08iRUU58
+      7sJGbzK5HE4HpNOFfc6VwSqUblJdG17zMdIHEGxNyQ2DCsJmIgIItkYEEGyNCCDYGhFAsDUi
+      gGBrRADB1ogAgq35/6lqTB1QDgqAAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
